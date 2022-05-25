@@ -17,15 +17,11 @@ public class MemoController {
     private final MemoRepository memoRepository;
     private final MemoService memoService;
 
-
-
     @PostMapping("/api/memos")
     public Memo createMemo(@RequestBody MemoRequestDto requestDto) {
         Memo memo = new Memo(requestDto);
         return memoRepository.save(memo);
     }
-
-
 
     @GetMapping("/api/memos")
     public List<Memo> readMemo(){
@@ -51,7 +47,6 @@ public class MemoController {
             return false;
         }
     }
-
 
     @PutMapping("/api/memos/{id}")
     public boolean updateMemo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto){
