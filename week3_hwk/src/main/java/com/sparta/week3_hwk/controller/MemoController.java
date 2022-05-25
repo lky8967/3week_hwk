@@ -25,30 +25,46 @@ public class MemoController {
         return memoRepository.save(memo);
     }
 
-    @PutMapping("/api/memos/{id}")
-    public Long updateMemo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto){
 
-        memoService.update(id, requestDto);
-        return id;
-    }
 
     @GetMapping("/api/memos")
     public List<Memo> readMemo(){
         return memoRepository.findAllByOrderByModifiedAtDesc();
     }
 
-    @DeleteMapping("/api/memos/{id}")
-    public Long deleteMemo(@PathVariable Long id , @RequestBody MemoRequestDto requestDto){
-        if( requestDto.getPassword().equals() )
-        memoRepository.deleteById(id);
-        return id;
+    @GetMapping("/api/memos/{id}")
+    public Memo detail(@PathVariable Long id){
+        return memoRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
+        );
     }
 
-//    @DeleteMapping("/api/memos/{id}")
-//    public Long deleteMemo(@PathVariable Long id){
-//        memoRepository.deleteById(id);
-//        return id;
-//    }
+    @DeleteMapping("/api/memos/{id}")
+    public boolean deleteMemo(@PathVariable Long id , @RequestBody MemoRequestDto requestDto){
+        Memo memo = memoRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
+        );
+        if( memo.getPassword().equals(requestDto.getPassword()) ){
+            memoRepository.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    @PutMapping("/api/memos/{id}")
+    public boolean updateMemo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto){
+        Memo memo = memoRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
+        );
+        if( memo.getPassword().equals(requestDto.getPassword())){
+            memoService.update(id, requestDto);
+            return true;
+        }
+        return false;
+    }
+
 
 
 }
