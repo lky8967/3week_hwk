@@ -3,6 +3,7 @@ package com.sparta.week3_hwk.controller;
 import com.sparta.week3_hwk.domain.Memo;
 import com.sparta.week3_hwk.domain.MemoRepository;
 import com.sparta.week3_hwk.domain.MemoRequestDto;
+import com.sparta.week3_hwk.domain.MemoResponseDto;
 import com.sparta.week3_hwk.service.MemoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -29,11 +30,10 @@ public class MemoController {
     }
 
     @GetMapping("/api/memos/{id}")
-    public Memo detailMemo(@PathVariable Long id){
-        return memoRepository.findById(id).orElseThrow(
-                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
-        );
+    public MemoResponseDto detailMemo(@PathVariable Long id){
+        return memoService.detail(id);
     }
+
     @DeleteMapping("/api/memos/{id}")
     public boolean deleteMemo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto) {
         return memoService.delete(id, requestDto);
@@ -43,7 +43,12 @@ public class MemoController {
     public boolean updateMemo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto) {
         return memoService.update(id, requestDto);
     }
-
+//    @GetMapping("/api/memos/{id}")
+//    public Memo detailMemo(@PathVariable Long id){
+//        return memoRepository.findById(id).orElseThrow(
+//                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
+//        );
+//    }
 //
 //
 //    @PutMapping("/api/memos/{id}")
