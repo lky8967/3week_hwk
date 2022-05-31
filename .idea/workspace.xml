@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec9a3d3e-ba11-4c9d-83f8-057e2fb18215" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/week3_hwk/src/main/java/com/sparta/week3_hwk/controller/MemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/week3_hwk/src/main/java/com/sparta/week3_hwk/controller/MemoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week3_hwk/src/main/java/com/sparta/week3_hwk/domain/MemoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/week3_hwk/src/main/java/com/sparta/week3_hwk/domain/MemoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week3_hwk/src/main/java/com/sparta/week3_hwk/service/MemoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/week3_hwk/src/main/java/com/sparta/week3_hwk/service/MemoService.java" afterDir="false" />
+    <list default="true" id="ec9a3d3e-ba11-4c9d-83f8-057e2fb18215" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week3_hwk/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/week3_hwk/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,14 +25,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/lky93/Desktop/spring/3week_hwk/week3_hwk"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lky93/Desktop/spring/3week_hwk&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,6 +46,12 @@
       <option name="presentableId" value="Default" />
       <updated>1653442707518</updated>
       <workItem from="1653442710253" duration="33000" />
+      <workItem from="1653731236680" duration="366000" />
+      <workItem from="1653731634345" duration="38000" />
+      <workItem from="1653732578933" duration="34000" />
+      <workItem from="1653870240239" duration="141000" />
+      <workItem from="1653889919268" duration="3389000" />
+      <workItem from="1653964744964" duration="97000" />
     </task>
     <servers />
   </component>
